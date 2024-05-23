@@ -97,14 +97,8 @@ h1 {
 }
 .name_block {
     margin: 20px 2%;
-    /* padding: 1% 0; */
 }
 
-/*slider */
-/* .container_slider {
-    margin: 1%;
-    padding: 1%;
-} */
 .slider {
     max-width: 800px;
     height: 533px;
@@ -118,23 +112,23 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%); */
 }
-
+/* место положение кнопок переключения слайда внизу (4px) по центру */
 .slider_nav {
     position: absolute;
-    bottom: 16px;
+    bottom: 4px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
 }
-
+/* Внешний вид кнопок слайда */
 .slide_bar {
     height: 8px;
-    width: 30px;
+    width: 25px;
     margin: 6px;
     cursor: pointer;
     background-color: #ddd;
     border-radius: 10px;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 .slide_bar:hover {
     opacity: 1;
@@ -144,6 +138,7 @@ input[name="slide_radio"] {
     position: absolute;
     visibility: hidden;
 }
+/* слайды делаем ширину в три раза больше, чтоб два других слайда спраятать за границами блока slider_photo */
 .slides {
     width: 300%;
     height: 100%;
@@ -151,9 +146,8 @@ input[name="slide_radio"] {
 }
 
 .slider_photo {
-
     max-width: 100%;
-    transition: all .6s ease;
+    transition: all .5s ease;
 }
 
 .slide {
@@ -161,7 +155,7 @@ input[name="slide_radio"] {
     height: 100%;
     object-fit: cover;
 }
-
+/* работа слайдера изменяем маржин (смещаем на 1/3) при нажатии кнопки (input radio checked) */
 #r1:checked ~ .s1 {
     margin-left: 0;
 }
@@ -190,9 +184,16 @@ input[name="slide_radio"] {
 
 /* Catalog product */
 
+.catalog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .block_catalog {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    margin: 0.5%;
 }
 .block_product {
     margin: 1%;
@@ -203,11 +204,9 @@ input[name="slide_radio"] {
     max-width: 400px;
 }
 .product_image {
-    margin: 5px;
+    margin: 1%;
     width: 300px;
-
 }
-
 .product_image > img {
     width: 100%;
     height: 100%;
@@ -216,4 +215,100 @@ input[name="slide_radio"] {
 .product_name {
     padding: 5% 1%;
     text-align: center;
+}
+/* Block our_team */
+.our_team {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    background-color: #FBFFD5;   
+}
+.container_worker {
+    margin: 2%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.worker {
+    max-width: 450px;
+    margin: 1%;    
+}
+.name_consultant {
+    margin: 2%;
+}
+.worker > img {
+    margin: 1%;
+    width: 100%;
+    max-height: 400px;
+}
+
+/* our partners block */
+.brands {
+    text-align: center;
+}
+.brands_image {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.brands_image > img {
+    margin: 2%;
+    max-width: 250px;
+    height: 100%;
+}
+
+/* advanced info blog */
+
+.advance_info {
+    text-align: center;
+    background-color: #FBFFD5;
+}
+.advance_info > img {
+    margin: 3%;
+    float: left;
+    max-width: 400px;
+    height: 100%;
+}
+
+/*comments block*/
+
+.comments {
+    text-align: center;
+}
+.container_comments {
+    padding: 1%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.comm_message {
+    margin: 2%;
+    padding: 0.5rem;
+    max-width: 400px;
+    min-height: 300px;
+    background: #FBFFD5;
+    border-radius: 7px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.comm_message > p {
+    font-size: 24px;
+    margin: 1.5rem;
+}
+
+/*footer*/
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.subscribe > form {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.form-subscribe > input {
+    height: 2.2rem;
+    width: 220px;
 }
