@@ -187,7 +187,7 @@ input[name="slide_radio"] {
 .catalog {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 .block_catalog {
     display: flex;
@@ -202,6 +202,7 @@ input[name="slide_radio"] {
     justify-content: space-between;
     align-items: center;
     max-width: 400px;
+    transition: all 1s;
 }
 .product_image {
     margin: 1%;
@@ -215,6 +216,48 @@ input[name="slide_radio"] {
 .product_name {
     padding: 5% 1%;
     text-align: center;
+}
+.filter {
+    margin: 2% 4%;
+    display: flex;
+    justify-content: space-around;
+}
+input[name="product"] {
+    display: none;
+}
+.filter > label {
+    margin: 0 1%;
+    width: 25%;
+    background: #A8B895;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+input[id="giros"]:checked + label {
+    background: #465f27;
+}
+input[type="radio"][id="giros"]:checked ~ .sigvei, input[type="radio"][id="giros"]:checked ~ .samokat {
+    visibility: hidden;
+}
+input[id="sigvei"]:checked + label {
+    background: #465f27;
+}
+input[id="sigvei"]:checked ~ .giros, input[id="sigvei"]:checked ~ .samokat {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+input[id="samokat"]:checked + label {
+    background: #465f27;
+}
+input[id="samokat"]:checked ~ .giros, input[id="samokat"]:checked ~ .sigvei {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
 }
 /* Block our_team */
 .our_team {
@@ -234,7 +277,8 @@ input[name="slide_radio"] {
     margin: 1%;    
 }
 .name_consultant {
-    margin: 2%;
+    margin: 5px;
+    font-size: 24px;
 }
 .worker > img {
     margin: 1%;
@@ -299,16 +343,46 @@ input[name="slide_radio"] {
 
 /*footer*/
 footer {
+    margin: 1%;
+    padding: 1% 0%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    align-items: center;
+    background-color: #A5A5A5;
 }
+/* Form subscribe */
 .subscribe > form {
     gap: 1rem;
     display: flex;
     flex-direction: column;
+    padding-bottom: 10px;
 }
 .form-subscribe > input {
     height: 2.2rem;
     width: 220px;
+}
+#name, #email {
+    font-size: 20px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgba(228, 241, 241, 0.932);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+/*button subscribe */
+#subscribe {
+    border: none;
+    border-radius: 7px;
+    font-size: 22px;
+    background-color: rgba(238, 105, 105, 0.705);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+#subscribe:hover {
+    transform: scale(1.03);
+    background-color: rgb(238, 105, 105)
+}
+#subscribe:active {
+    transform: scale(0.95);
+    background-color: rgb(230, 76, 76);
 }
