@@ -202,7 +202,7 @@ input[name="slide_radio"] {
     justify-content: space-between;
     align-items: center;
     max-width: 400px;
-    transition: all 1s;
+    transition: all .4s;
 }
 .product_image {
     margin: 1%;
@@ -233,26 +233,30 @@ input[name="product"] {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
     cursor: pointer;
 }
-input[id="giros"]:checked + label {
+input[id="giros"]:checked ~ .filter > label:nth-of-type(2) {
     background: #465f27;
 }
-input[type="radio"][id="giros"]:checked ~ .sigvei, input[type="radio"][id="giros"]:checked ~ .samokat {
-    visibility: hidden;
-}
-input[id="sigvei"]:checked + label {
-    background: #465f27;
-}
-input[id="sigvei"]:checked ~ .giros, input[id="sigvei"]:checked ~ .samokat {
+input[name="product"][id="giros"]:checked ~ .block_catalog >.sig, input[type="radio"][id="giros"]:checked ~ .block_catalog > .samokats {
     width: 0;
     height: 0;
     padding: 0;
     margin: 0;
     opacity: 0;
 }
-input[id="samokat"]:checked + label {
+input[id="sigvei"]:checked ~ .filter > label:nth-of-type(3) {
     background: #465f27;
 }
-input[id="samokat"]:checked ~ .giros, input[id="samokat"]:checked ~ .sigvei {
+input[id="sigvei"]:checked ~ .block_catalog > .giro, input[id="sigvei"]:checked ~ .block_catalog > .samokats {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+input[id="samokat"]:checked ~ .filter > label:nth-of-type(4) {
+    background: #465f27;
+}
+input[id="samokat"]:checked ~ .block_catalog > .giro, input[id="samokat"]:checked ~ .block_catalog > .sig {
     width: 0;
     height: 0;
     padding: 0;
