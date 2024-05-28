@@ -102,15 +102,15 @@ h1 {
     max-width: 1200px;
     height: 600px;
     overflow: hidden;
-
 }
-
+@media screen and (max-width: 1300px) {
+    .slider {
+        max-width: 900px;
+        height: 450px;
+    }
+}
 .middle {
     position: relative;
-    
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
 }
 /* место положение кнопок переключения слайда внизу (4px) по центру */
 .slider_nav {
@@ -128,7 +128,6 @@ h1 {
     cursor: pointer;
     background-color: #ffffff00;
     border-radius: 10px;
-    /* opacity: 0.; */
     border: rgba(0, 0, 0, 0.7) solid;
 }
 #r1:checked ~ .slider_nav label:nth-child(1){
@@ -164,9 +163,11 @@ input[name="slide_radio"] {
     max-width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: right;
+    transition: all .5s ease;
 }
 /* работа слайдера изменяем маржин (смещаем на 1/3) при нажатии кнопки (input radio checked) */
-#r1:checked ~ .slides .s1  {
+#r1:checked ~ .slide .s1  {
     margin-left: 0;
 }
 #r2:checked ~ .slides .s1 {
@@ -183,8 +184,7 @@ input[name="slide_radio"] {
     align-items: center;
     justify-content: center;
     background-color: #FBFFD5;
-    height: fit-content;
-    
+    height: fit-content;  
 }
 .text_info {
     text-align: left;
