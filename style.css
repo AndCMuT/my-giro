@@ -114,9 +114,9 @@ h1 {
     width: 23px;
     margin: 6px;
     cursor: pointer;
-    background-color: #ffffff00;
+    background-color: #ffffff;
     border-radius: 10px;
-    border: rgba(0, 0, 0, 0.7) solid;
+    border: rgb(0, 0, 0) solid;
 }
 #r1:checked ~ .slider_nav label:nth-child(1){
     background-color: rgba(250, 197, 154, 0.7);
@@ -141,21 +141,15 @@ input[name="slide_radio"] {
     height: 100%;
     display: flex;
 }
-
-.slider_photo {
-    max-width: 100%;
-    transition: all .5s ease;
-}
-
 .slide {
     max-width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: right;
+    /* object-fit: cover; */
+    /* object-position: right; */
     transition: all .5s ease;
 }
 /* работа слайдера изменяем маржин (смещаем на 1/3) при нажатии кнопки (input radio checked) */
-#r1:checked ~ .slide .s1  {
+#r1:checked ~ .slides .s1  {
     margin-left: 0;
 }
 #r2:checked ~ .slides .s1 {
