@@ -144,8 +144,7 @@ input[name="slide_radio"] {
 .slide {
     max-width: 100%;
     height: 100%;
-    /* object-fit: cover; */
-    /* object-position: right; */
+    object-fit: cover;
     transition: all .5s ease;
 }
 /* работа слайдера изменяем маржин (смещаем на 1/3) при нажатии кнопки (input radio checked) */
@@ -195,6 +194,13 @@ input[name="slide_radio"] {
     max-width: 400px;
     transition: all .4s;
 }
+.price {
+    font-size: 28px;
+    margin: 2%;
+    padding: 1%;
+    border-radius: 7px 7px;
+    background-color: rgba(255, 120, 120, 0.432);
+}
 .product_image {
     margin: 1%;
     width: 300px;
@@ -230,7 +236,7 @@ input[id="allProd"]:checked ~ .filter > label:nth-of-type(1) {
 input[id="giros"]:checked ~ .filter > label:nth-of-type(2) {
     background: #a4a565;
 }
-input[name="product"][id="giros"]:checked ~ .block_catalog >.sig, input[type="radio"][id="giros"]:checked ~ .block_catalog > .samokats {
+input[name="product"][id="giros"]:checked ~ .block_catalog >.sig, input[id="giros"]:checked ~ .block_catalog > .samokats {
     width: 0;
     height: 0;
     padding: 0;
