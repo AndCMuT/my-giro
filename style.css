@@ -412,3 +412,18 @@ footer {
         height: 450px;
     }
 }
+
+@media screen and (max-width: 975px) {
+    .slider {
+        max-width: 600px;
+        height: 300px;
+    }
+    .callMe {
+        font-size: 18px;
+        width: 150px;
+        height: 40px;
+    }
+    .callMeBack > p {
+        font-size: 18px;
+    }
+}
